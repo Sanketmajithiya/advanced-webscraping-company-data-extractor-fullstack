@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat Data Extractor Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css?v=2">
+    <link rel="stylesheet" href="/static/mobile.css?v=2">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-glow"></div>
+    <div class="cursor-glow"></div>
+    <div id="toast-notification" class="toast hidden"></div>
+
+    <div class="container">
+        <!-- ... (unchanged content) ... -->
+        <script src="/static/script.js?v=3"></script>
+</body>
+<header class="slide-in-1">
+    <div class="logo">
+        <i class="fa-solid fa-layer-group"></i>
+        <h1>Data<span>Extractor</span></h1>
+    </div>
+    <div class="status-indicator" id="statusIndicator">
+        <span class="dot"></span>
+        <span class="text">System Ready</span>
+    </div>
+</header>
+
+<main>
+    <div class="control-panel slide-in-2">
+        <div class="input-group">
+            <label>Target City</label>
+            <div class="input-wrapper">
+                <i class="fa-solid fa-city"></i>
+                <input type="text" id="cityInput" value="Surat" placeholder="Enter City Name">
+            </div>
+        </div>
+
+        <div class="search-mode-toggle">
+            <label>Search Mode</label>
+            <div class="toggle-container">
+                <button class="toggle-btn active" data-mode="it" onclick="setMode('it')">
+                    <i class="fa-solid fa-laptop-code"></i> IT Companies
+                </button>
+                <button class="toggle-btn" data-mode="custom" onclick="setMode('custom')">
+                    <i class="fa-solid fa-magnifying-glass"></i> Custom Search
+                </button>
+            </div>
+        </div>
+
+        <div class="input-group" id="customQueryGroup" style="display: none;">
+            <label>Search Query (e.g., Restaurants, Gyms)</label>
+            <div class="input-wrapper">
+                <i class="fa-solid fa-keyboard"></i>
+                <input type="text" id="customQueryInput" placeholder="Enter keywords...">
+            </div>
+        </div>
+
+        <div class="area-section">
+            <label>Target Areas</label>
+            <div class="area-input-wrapper">
+                <input type="text" id="areaInput" placeholder="Add an area (e.g., Vesu)">
+                <button onclick="addArea()"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="area-tags" id="areaTags">
+                <!-- Tags will appear here -->
+                <div class="tag">Adajan <i class="fa-solid fa-xmark" onclick="removeArea(this)"></i></div>
+            </div>
+        </div>
+
+        <button class="run-btn" onclick="startScraper()" id="runBtn">
+            <span class="btn-text">Start Extraction</span>
+            <i class="fa-solid fa-rocket"></i>
+        </button>
+    </div>
+
+    <div class="results-panel" id="resultsPanel">
+        <div class="results-header">
+            <h2> Extraction Results</h2>
+            <div class="actions">
+                <button class="action-btn close" onclick="closeResults()">
+                    <i class="fa-solid fa-xmark"></i> Close
+                </button>
+                <button class="action-btn view" onclick="viewData()">
+                    <i class="fa-solid fa-eye"></i> View Data
+                </button>
+                <button class="action-btn download" onclick="downloadData()">
+                    <i class="fa-solid fa-download"></i> Download Excel
+                </button>
+            </div>
+        </div>
+
+        <div class="data-preview" id="dataPreview">
+            <div class="empty-state">
+                <i class="fa-solid fa-database"></i>
+                <p>No data loaded yet. Click "View Data" after extraction.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer slide-in-3">
+    <p>Design by Sanket Majithiya 👨‍💻</p>
+</footer>
+</div>
+
+<!-- Loading Overlay -->
+<div class="loader-overlay" id="loaderOverlay">
+    <div id="loading" class="hidden">
+        <div class="loading-content">
+            <div class="scanner-loader">
+                <div class="ring"></div>
+                <div class="ring"></div>
+                <div class="ring"></div>
+                <div class="core"></div>
+            </div>
+            <h3 id="loading-text">Extracting Data...</h3>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 5px;">You can minimize this tab,
+                process runs in background.</p>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+            <p id="status-text" class="status-text">Initializing...</p>
+
+            <div class="log-console" id="log-console">
+                <div class="log-entry">Waiting for start...</div>
+            </div>
+
+            <p class="sub-text">Please wait while the agents scrape Google Maps.</p>
+            <p class="sub-text">This may take a few minutes.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

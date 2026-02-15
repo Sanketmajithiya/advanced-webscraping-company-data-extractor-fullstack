@@ -1,0 +1,567 @@
+/* --- Mobile Responsiveness (Fixed & Optimized) --- */
+@media (max-width: 768px) {
+    /* Reset & Base */
+    body {
+        padding: 0;
+        background-color: var(--bg-dark);
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        margin: 0;
+        gap: 15px;
+    }
+
+    /* Header */
+    header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+        -webkit-text-fill-color: white;
+        background: none;
+        text-shadow: 0 0 15px var(--accent-glow);
+    }
+
+    .logo span {
+        -webkit-text-fill-color: var(--accent);
+    }
+
+    .status-indicator {
+        width: 100%;
+        justify-content: center;
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    /* Control Panel */
+    .control-panel {
+        padding: 20px 16px;
+        width: 100%;
+        box-sizing: border-box;
+        backdrop-filter: blur(20px);
+    }
+
+    /* Input Groups */
+    .input-group {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .input-group label {
+        font-size: 13px;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .input-wrapper {
+        padding: 12px 16px;
+        font-size: 15px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .input-wrapper i {
+        margin-right: 10px;
+        font-size: 16px;
+    }
+
+    .input-wrapper input {
+        font-size: 15px;
+        width: 100%;
+    }
+
+    /* Toggle Buttons */
+    .toggle-container {
+        flex-direction: column;
+        gap: 8px;
+        background: transparent;
+        padding: 0;
+    }
+
+    .toggle-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 15px;
+        justify-content: flex-start;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--glass-border);
+        border-radius: 12px;
+    }
+
+    .toggle-btn i {
+        width: 20px;
+        text-align: center;
+    }
+
+    .toggle-btn.active {
+        background: rgba(76, 175, 80, 0.15);
+        border-color: var(--accent);
+    }
+
+    /* Target Areas Section */
+    .target-areas {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 15px;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .areas-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .area-tag {
+        padding: 8px 16px;
+        font-size: 13px;
+        border-radius: 30px;
+        background: rgba(76, 175, 80, 0.1);
+        border: 1px solid rgba(76, 175, 80, 0.2);
+    }
+
+    /* Area Input Wrapper - CRITICAL FIX */
+    .area-input-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .area-input-wrapper input {
+        flex: 1;
+        min-width: 0;
+        width: auto;
+        padding: 14px;
+        font-size: 15px;
+        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--glass-border);
+        color: white;
+    }
+
+    .area-input-wrapper button {
+        width: 52px;
+        height: 52px;
+        flex-shrink: 0;
+        padding: 0;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+    }
+
+    .area-input-wrapper button i {
+        margin: 0;
+    }
+
+    .area-input-wrapper button:hover {
+        transform: none;
+        box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    .area-input-wrapper button:active {
+        transform: scale(0.95);
+    }
+
+    /* Custom Search */
+    .custom-search {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .custom-search .input-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+    }
+
+    .custom-search .input-wrapper i {
+        margin-right: 0;
+        font-size: 18px;
+    }
+
+    .custom-search .input-wrapper input {
+        padding: 0;
+        font-size: 15px;
+        width: 100%;
+    }
+
+    /* Run Button */
+    .run-btn {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 17px;
+        border-radius: 30px;
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .run-btn i {
+        font-size: 20px;
+    }
+
+    .run-btn:active {
+        transform: scale(0.98);
+    }
+
+    /* Results Section */
+    .results-panel,
+    .results-container {
+        padding: 20px 16px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 20px;
+    }
+
+    .results-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .results-header h2,
+    .results-header h3 {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .results-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .action-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 12px;
+    }
+
+    .action-btn i {
+        font-size: 16px;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .stat-card {
+        padding: 16px;
+        border-radius: 16px;
+        background: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+    }
+
+    .stat-number {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .stat-label {
+        font-size: 12px;
+        color: var(--text-secondary);
+        margin-top: 4px;
+    }
+
+    /* Companies List */
+    .companies-list {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .company-item {
+        padding: 16px;
+        border-radius: 16px;
+        margin-bottom: 12px;
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid var(--glass-border);
+    }
+
+    .company-info h4 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: white;
+    }
+
+    .company-info p {
+        font-size: 13px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 6px;
+        color: var(--text-secondary);
+    }
+
+    .company-info i {
+        width: 16px;
+        font-size: 14px;
+    }
+
+    /* Loader */
+    .loader-overlay {
+        padding: 20px;
+    }
+
+    .scanner-loader {
+        width: 80px;
+        height: 80px;
+    }
+
+    .loading-content {
+        width: 95%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    .loading-content h2 {
+        font-size: 20px;
+        margin: 15px 0 5px;
+    }
+
+    .loading-content p {
+        font-size: 14px;
+    }
+
+    .log-console {
+        height: 140px;
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    /* Footer */
+    footer,
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px 16px;
+        margin-top: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+        color: var(--text-secondary);
+        text-decoration: none;
+    }
+
+    /* Toast */
+    .toast {
+        width: 90%;
+        max-width: 400px;
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
+    /* Cursor Glow - Disable on mobile */
+    .cursor-glow {
+        display: none;
+    }
+}
+
+/* --- Small Mobile Devices (480px and below) --- */
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+
+    header {
+        padding: 14px;
+    }
+
+    .logo h1 {
+        font-size: 22px;
+    }
+
+    .logo i {
+        font-size: 24px;
+    }
+
+    .control-panel {
+        padding: 16px 12px;
+    }
+
+    .input-wrapper,
+    .toggle-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .area-input-wrapper {
+        gap: 8px;
+    }
+
+    .area-input-wrapper input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .area-input-wrapper button {
+        width: 48px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .areas-grid {
+        gap: 8px;
+    }
+
+    .area-tag {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+
+    .results-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .company-item {
+        padding: 14px;
+    }
+
+    .stat-card {
+        padding: 14px;
+    }
+
+    .stat-number {
+        font-size: 22px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+}
+
+/* --- Landscape Mode Fix --- */
+@media (max-width: 768px) and (orientation: landscape) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 12px;
+    }
+
+    .control-panel {
+        padding: 16px;
+    }
+
+    .area-input-wrapper {
+        flex-direction: row;
+    }
+
+    .toggle-container {
+        flex-direction: row;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* --- Notch & Safe Area Support --- */
+@supports (padding: max(0px)) {
+    @media (max-width: 768px) {
+        .container {
+            padding-left: max(15px, env(safe-area-inset-left));
+            padding-right: max(15px, env(safe-area-inset-right));
+        }
+
+        header,
+        .control-panel,
+        .footer {
+            padding-left: max(16px, env(safe-area-inset-left));
+            padding-right: max(16px, env(safe-area-inset-right));
+        }
+    }
+}
+
+/* --- Touch Device Optimizations --- */
+@media (hover: none) and (pointer: coarse) {
+    .toggle-btn:hover,
+    .area-input-wrapper button:hover,
+    .run-btn:hover,
+    .action-btn:hover,
+    .area-tag:hover {
+        transform: none;
+    }
+
+    .toggle-btn:active,
+    .area-input-wrapper button:active,
+    .run-btn:active,
+    .action-btn:active,
+    .area-tag:active {
+        transform: scale(0.97);
+        transition: transform 0.1s;
+    }
+
+    /* Remove hover effects on touch devices */
+    .run-btn::before {
+        display: none;
+    }
+
+    .input-wrapper:focus-within {
+        transform: none;
+    }
+}

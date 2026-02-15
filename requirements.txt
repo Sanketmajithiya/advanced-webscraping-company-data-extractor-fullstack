@@ -1,0 +1,8 @@
+flask
+selenium
+requests
+pandas
+openpyxl
+webdriver-manager
+beautifulsoup4
+
